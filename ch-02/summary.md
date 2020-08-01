@@ -76,14 +76,6 @@ ex) `SomethingManager` | `SomethingProcessor`
 ## 💻 메소드 이름
 
 #### 메소드 이름은 동사나 동사구가 적합하다.
-
-* 좋은 예
-```java
-String name = employee.getName();
-customer.setName("jiwoo");
-if (paycheck.isPosted())...
-```
-
 #### 생성자를 중복정의(overload)할 때는 `정적 팩토리 메소드`를 사용한다.<br><br>
 
 
