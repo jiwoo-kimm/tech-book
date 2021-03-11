@@ -15,7 +15,7 @@
 
 - 결함을 일으키는 corner cases를 처리해야 한다.<br>
 ex) 수치적 오버플로우, 비거나 빠진 값, 중복값 등
-- [CORRECT]()
+- [CORRECT](https://github.com/jiwoo-kimm/tech-book/tree/master/pragmatic-unit-testing-in-java-with-junit/ch-07/summary.md)
 
 <br>
 
