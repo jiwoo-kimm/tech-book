@@ -10,3 +10,4 @@
 * [5장 | 좋은 테스트의 FIRST 속성](./ch-05/summary.md)
 * [6장 | Right-BICEP](./ch-06/summary.md)
 * [7장 | 경계조건: CORRECT](./ch-07/summary.md)
+* [8장 | 깔끔한 코드로 리팩토링하기](./ch-08/summary.md)
