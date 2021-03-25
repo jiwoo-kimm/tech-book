@@ -8,3 +8,5 @@
 * [3장 | JUnit 단언 깊게 파 보기](./ch-03/summary.md)
 * [4장 | 테스트 조직](./ch-04/summary.md)
 * [5장 | 좋은 테스트의 FIRST 속성](./ch-05/summary.md)
+* [6장 | Right-BICEP](./ch-06/summary.md)
+* [7장 | 경계조건: CORRECT](./ch-07/summary.md)
