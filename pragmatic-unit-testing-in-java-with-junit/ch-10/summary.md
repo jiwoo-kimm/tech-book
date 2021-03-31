@@ -2,12 +2,16 @@
 
 💡 Mock 객체를 사용하여 의존성이 있는 다른 코드(API)와 분리하기
 
+<br>
+
 ## Stub
 - 테스트 용도로 하드 코딩한 값을 반환하는 구현체
 - 별다른 설정 없이 stub 인스턴스를 생성하여 메서드 로직 테스트
 
 ### Stub 인자 검증
 - 객체가 제대로 된 인자를 정확하게 넘기는 지 검증
+
+<br>
 
 ## Mock
 
@@ -30,3 +34,25 @@ when(http.get(contains("lat=38.000000&lon=-104.000000")))
 - `mock()`: Mock 인스턴스를 합성
 - `when()`: 테스트의 기대 사항 설정
 - `thenReturn()`: 기대 사항이 충족되었을 때의 처리
+
+### Mock 주입
+- 생성자에 Mock 객체를 직접 넘기면 내부 사항을 노출하게 됨
+- DI 도구를 사용하자
+
+```java
+@Mock private Http http;  // Mock 인스턴스
+@InjectMocks private AddressRetriever retriever;  // 주입 대상 인스턴스
+
+@Before
+public void createRetriever() {
+  retriever = new AddressRetriever();
+  MockitoAnnotations.initMocks(this); // `mock(Http.class)`와 동일하게 작동
+}
+```
+
+- `@Mock`: Mock 인스턴스를 합성하고자 하는 필드
+- `@InjectMocks`: 합성한 Mock을 주입하고자 하는 대상 필드
+- `MockitoAnnotations.initMocks(this)`
+  - `this`: 테스트 클래스 자체
+  - 테스트 클래스의 `@Mock` 필드에 대해 모두 인스턴스 합성
+  - `@InjectMocks` 필드에 모든 Mock 인스턴스 주입 
