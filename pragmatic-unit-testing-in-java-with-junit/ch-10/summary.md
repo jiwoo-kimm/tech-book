@@ -46,13 +46,13 @@ when(http.get(contains("lat=38.000000&lon=-104.000000")))
 @Before
 public void createRetriever() {
   retriever = new AddressRetriever();
-  MockitoAnnotations.initMocks(this); // `mock(Http.class)`와 동일하게 작동
+  MockitoAnnotations.openMocks(this); // `mock(Http.class)`와 동일하게 작동
 }
 ```
 
 - `@Mock`: Mock 인스턴스를 합성하고자 하는 필드
 - `@InjectMocks`: 합성한 Mock을 주입하고자 하는 대상 필드
-- `MockitoAnnotations.initMocks(this)`
+- `MockitoAnnotations.openMocks(this)`
   - `this`: 테스트 클래스 자체
   - 테스트 클래스의 `@Mock` 필드에 대해 모두 인스턴스 합성
   - `@InjectMocks` 필드에 모든 Mock 인스턴스 주입 
