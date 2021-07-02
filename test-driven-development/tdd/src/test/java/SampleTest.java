@@ -12,4 +12,10 @@ public class SampleTest {
         product = five.times(3);
         assertThat(product.amount).isEqualTo(15);
     }
+
+    @Test
+    void testEquality() throws Exception {
+        assertThat(new Dollar(5).equals(new Dollar(5))).isTrue();
+        assertThat(new Dollar(5).equals(new Dollar(6))).isFalse();
+    }
 }
